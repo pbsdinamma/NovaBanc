@@ -1,0 +1,24 @@
+# Build output
+build/
+
+# Runtime output
+logs/
+reports/
+
+# Data files (kept in repo as empty stubs, populated at runtime)
+# Uncomment the next line if you don't want to track data:
+# data/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compiled object files
+*.o
+*.obj

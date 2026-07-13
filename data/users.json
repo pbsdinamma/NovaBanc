@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "account_ids": [],
+            "address": "Test City",
+            "age": 25,
+            "created_at": "2026-06-27T16:32:46",
+            "email": "alice@example.com",
+            "failed_login_attempts": 0,
+            "first_name": "Alice",
+            "is_locked": false,
+            "last_name": "Smith",
+            "password_hash": "9b5b5e99ec25926374ca1b29c3134d7eef6d00aba97cdee15406b05fae0f9ffe",
+            "password_salt": "8fb959ea0198df83f5f92ba95187b3c9",
+            "phone": "9000000001",
+            "user_id": "USR-20260627-0012",
+            "username": "alice"
+        },
+        {
+            "account_ids": [
+                "ACC-20260627-0001",
+                "ACC-20260627-0002"
+            ],
+            "address": "homw",
+            "age": 19,
+            "created_at": "2026-06-27T17:06:44",
+            "email": "akellasathwik2007@gmail.com",
+            "failed_login_attempts": 0,
+            "first_name": "sathwik",
+            "is_locked": false,
+            "last_name": "akella",
+            "password_hash": "26e926af85aa6d19b7e3a0324ca66f3c666ce4d72eedc8e5439a6fe810b1979b",
+            "password_salt": "8fb959ea0198df83f5f92ba95187b3c9",
+            "phone": "9014725318",
+            "user_id": "USR-20260627-0013",
+            "username": "pbskaaya"
+        }
+    ]
+}

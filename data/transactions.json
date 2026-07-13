@@ -1,0 +1,22 @@
+{
+    "transactions": [
+        {
+            "account_id": "ACC-20260627-0001",
+            "amount": 69696969.0,
+            "balance_after": 69696969.0,
+            "description": "Initial deposit",
+            "timestamp": "2026-06-27T17:07:03",
+            "transaction_id": "TXN-20260627170703-0087",
+            "type": "DEPOSIT"
+        },
+        {
+            "account_id": "ACC-20260627-0002",
+            "amount": 12424.0,
+            "balance_after": 12424.0,
+            "description": "Initial deposit",
+            "timestamp": "2026-06-27T17:07:08",
+            "transaction_id": "TXN-20260627170708-0088",
+            "type": "DEPOSIT"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+
+
+No session tokens — a logged-in flag is correct for a single-user terminal app
+No atomic file writes — direct writes are fine; document that production would use atomic writes
+No log rotation — one log file is fine for a portfolio project
+No FixedDepositAccount — Savings + Current fully demonstrates polymorphism
+No threading — single-threaded is correct for this architecture; mention it as a known limitation
+No encryption at rest — passwords are hashed; mention AES encryption as a future improvement in README
+
+
+
+
+
+
+
+## Interview Reference
+
+If asked to walk through this project:
+
+1. **How does a transfer work end-to-end?** `Bank::transfer()` validates both accounts, calls `from->withdraw()` (which records a `TRANSFER_DEBIT` transaction), then calls `to->deposit()` (which records a `TRANSFER_CREDIT`). If the credit throws, the debit is reversed immediately before re-throwing. Finally, `saveAll()` persists both accounts atomically to disk.
+
+2. **How are passwords stored?** `HashUtils::generateSalt()` creates 16 random bytes as hex. `HashUtils::hashWithSalt(password, salt)` returns SHA-256(password + salt). Only the hash and salt go into `users.json`. Verification re-hashes the input and compares strings.
+
+3. **Why is Account abstract?** It enforces the invariant that you can never accidentally instantiate a generic account with no type-specific rules. The abstract interface (`canWithdraw`, `getMinimumBalance`, `getInterestRate`, `getAccountType`) is a contract that every concrete account type must fulfil.
+
+4. **What happens if the program crashes mid-write?** The JSON file is partially overwritten. On next startup, `loadAll()` wraps the parse in a try/catch and throws `StorageException`. `main()` catches that, logs a warning, and starts with empty in-memory state. The previous clean save is lost. In production, atomic file writes (write + rename) would prevent this.
+
+5. **How would you add a FixedDepositAccount?** Subclass `Account`, implement `getMinimumBalance()` (e.g., Rs.10,000), `getInterestRate()` (e.g., 6%), `canWithdraw()` (deny withdrawals before maturity date), and `toJson()`. Add `"FIXED_DEPOSIT"` to `loadAccounts()` in `StorageManager`. No other existing code changes.

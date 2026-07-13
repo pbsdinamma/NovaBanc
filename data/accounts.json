@@ -1,0 +1,26 @@
+{
+    "accounts": [
+        {
+            "account_id": "ACC-20260627-0001",
+            "account_type": "SAVINGS",
+            "balance": 69696969.0,
+            "daily_withdrawn_today": 0.0,
+            "last_withdraw_date": "2026-06-27",
+            "last_withdraw_month": "2026-06",
+            "monthly_withdrawals": 0,
+            "opened_date": "2026-06-27T17:07:03",
+            "status": "ACTIVE",
+            "user_id": "USR-20260627-0013"
+        },
+        {
+            "account_id": "ACC-20260627-0002",
+            "account_type": "CURRENT",
+            "balance": 12424.0,
+            "daily_withdrawn_today": 0.0,
+            "last_withdraw_date": "",
+            "opened_date": "2026-06-27T17:07:08",
+            "status": "ACTIVE",
+            "user_id": "USR-20260627-0013"
+        }
+    ]
+}

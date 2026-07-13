@@ -4,7 +4,7 @@
 
 using namespace novabanc;
 
-// â”€â”€ Email â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+//Email 
 
 TEST_CASE("InputValidator â€” valid emails pass", "[validator][email]") {
     REQUIRE(InputValidator::isValidEmail("user@example.com")   == true);
@@ -21,7 +21,7 @@ TEST_CASE("InputValidator â€” invalid emails fail", "[validator][email]") {
     REQUIRE(InputValidator::isValidEmail("user@example") == false); // no dot after @
 }
 
-// â”€â”€ Phone â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+//Phone
 
 TEST_CASE("InputValidator â€” exactly 10 digit phone passes", "[validator][phone]") {
     REQUIRE(InputValidator::isValidPhone("9876543210") == true);

@@ -59,18 +59,12 @@ Third-party libraries are already bundled in `third_party/`:
 
 ## Build & Run
 
-```bash
-# Clone / enter the project directory
-cd novabanc/
+```powershell
+# Build static release binary (using MSYS2/MinGW g++ in PowerShell)
+g++ -std=c++17 -Wall -Wextra -Iinclude -Ithird_party -O2 -static (Get-ChildItem src\*.cpp) -o build\novabanc.exe
 
-# Build release binary (use mingw32-make on Windows)
-make
-
-# Run
-make run
-
-# Or directly
-./build/novabanc
+# Run the compiled executable
+.\build\novabanc.exe
 ```
 
 **Login credentials:**

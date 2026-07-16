@@ -6,7 +6,7 @@
             "age": 25,
             "created_at": "2026-06-27T16:32:46",
             "email": "alice@example.com",
-            "failed_login_attempts": 0,
+            "failed_login_attempts": 1,
             "first_name": "Alice",
             "is_locked": false,
             "last_name": "Smith",
@@ -25,7 +25,7 @@
             "age": 19,
             "created_at": "2026-06-27T17:06:44",
             "email": "akellasathwik2007@gmail.com",
-            "failed_login_attempts": 0,
+            "failed_login_attempts": 1,
             "first_name": "sathwik",
             "is_locked": false,
             "last_name": "akella",
@@ -34,6 +34,22 @@
             "phone": "9014725318",
             "user_id": "USR-20260627-0013",
             "username": "pbskaaya"
+        },
+        {
+            "account_ids": [],
+            "address": "a",
+            "age": 19,
+            "created_at": "2026-07-16T16:06:34",
+            "email": "akellasathwik2007@gmail.com",
+            "failed_login_attempts": 3,
+            "first_name": "sathwik",
+            "is_locked": true,
+            "last_name": "akella",
+            "password_hash": "95cce934fd5f3a68451817ef0cf76d9cfb0f83a3d14b1d5ca12433f38580007f",
+            "password_salt": "c3b1afaaf0dacf20ea8050e4ae9d35e4",
+            "phone": "1234567890",
+            "user_id": "USR-20260716-0014",
+            "username": "sathwik"
         }
     ]
 }

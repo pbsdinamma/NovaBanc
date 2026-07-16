@@ -12,7 +12,7 @@
 
 namespace novabanc {
 
-// ── Constructor ───────────────────────────────────────────────────────────────
+//Constructor
 
 Bank::Bank(const std::string& bankName,
            StorageManager&    storage,
@@ -21,7 +21,7 @@ Bank::Bank(const std::string& bankName,
     , m_storage(storage)
     , m_logger(logger) {}
 
-// ── Persistence ───────────────────────────────────────────────────────────────
+//Persistence
 
 bool Bank::saveAll() {
     return m_storage.saveAll(*this);
@@ -31,7 +31,7 @@ bool Bank::loadAll() {
     return m_storage.loadAll(*this);
 }
 
-// ── User management ───────────────────────────────────────────────────────────
+//User management
 
 User& Bank::createUser(const std::string& username,
                        const std::string& password,
